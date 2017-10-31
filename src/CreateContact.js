@@ -7,6 +7,7 @@ class CreateContact extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const values = serializeForm(e.target, {hash:true});
+    console.log(values);
     if (this.props.onCreateContact) {
       this.props.onCreateContact(values);
     }
@@ -23,8 +24,8 @@ class CreateContact extends Component {
             maxHeight={64}
           />
           <div className="create-contact-details">
-            <input type="text" name="name" placeHolder="Name"/>
-            <input type="text" name="email" placeHolder="Email"/>
+            <input type="text" name="name" placeolder="Name"/>
+            <input type="text" name="email" placeolder="Email"/>
             <button>Add Contact</button>
           </div>
         </form>
